@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+      <title>지하철 승하차 알림
+      </title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- sylesheet -->
+    </head>
+   <body class="is-preload">
+
+      <!-- Header -->
+         <section id="header">
+            <header class="major">
+               <h1>지하철 하차 승강장 도착 알림 서비스</h1>
+               <p>Begin 버튼을 누르고 알림 서비스를 이용해보세요.</p>
+            </header>
+            <div class="container">
+               <ul class="actions special">
+                  <li><a href="#footer" class="button primary scrolly">Begin</a></li>
+               </ul>
+            </div>
+         </section>
+
+         
+      <!-- Footer -->
+           <section id="footer">
+               <div class="container">
+                   <header class="major">
+                       <h2>출발역과 도착역을 입력하세요</h2>
+                   </header>
+                   <form method="post" action="#">
+                       <div class="row gtr-uniform">
+                           <div class="col-6 col-12-xsmall"><input type="text" name="departure" id="departure_station" placeholder="출발역" /></div>
+                           <div class="col-6 col-12-xsmall"><input type="text" name="arrival" id="arrival_station" placeholder="도착역" /></div>
+                           <div class="col-6 col-12-xsmall"><input type="text" name="line_number" placeholder="호선" /></div>
+                         
+                               <ul class="actions special">
+							
+							 <a style="text-align: center;" id = "search" onclick = "save_stations()" href="result.html" target="_blank" class="button primary scrolly">Search</a>
+                          	
+							<script>
+								function save_stations(){
+									var departure_station = document.getElementById("departure_station").value;
+									var arrival_station = document.getElementById("arrival_station").value;
+
+									console.log("출발역 : " + departure_station);
+									console.log("도착역 :" + arrival_station);
+
+								}
+                            </script>
+                                </ul>
+                           
+                       </div>
+                   </form>
+               </div>
+           </section>   
+   </body>
+</html>
